@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-image: url('https://media.istockphoto.com/id/1502937330/photo/view-from-above-of-a-simple-youth-makeup-kit-eye-shadow-makeup-remover-wipes-a-red-lipstick.webp?a=1&b=1&s=612x612&w=0&k=20&c=uUJRMG9dJs1hf254Ph9novzhIomAK0i0pCbM_kIhDhQ=');
+            background-size: full; /* Changed to cover for better scaling */
+            background-attachment: fixed; /* Make the background static */
+            background-position: center;
+            background: opacity 5px;
+        }
+
+        #main-cont {
+            background-color: rgba(56, 53, 53, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+            max-height: 80vh; /* Set a max height to make it scrollable */
+            margin: 20px auto; /* Center the container */
+        }
+
+        #main-cont::-webkit-scrollbar {
+            display: none; /* Chrome, Safari: Hide scrollbar */
+        }
+
+        /* Firefox: Hide scrollbar */
+        #main-cont {
+            scrollbar-width: none; /* Corrected selector */
+        }
+
+        .product-card {
+            background-color: #d1c6c6;
+            color: rgb(0, 0, 0); /* Fixed color property */
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body class="p-6">
+    
+    <header class="bg-black p-4 mb-6 rounded w-full">
+        <div class="flex w-full justify-between text-white p-1">
+            <div>
+                <h1 class="font-mono text-left"><u>LIFESTYLE</u></h1>
+            </div>
+            <div class="icons">
+                <a href="#search" class="icon">🔍</a>
+                <a href="#cart" class="icon">🛒</a>
+            </div>
+        </div>
+    </header>
+    
+
+    <div id="main-cont" class="max-w-2xl mx-auto">
+        <h2 class="text-2xl font-bold mb-4 text-white">Available Products</h2>
+        <!-- Products will be injected here -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
